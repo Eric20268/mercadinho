@@ -151,96 +151,102 @@ const produtosTecnologia = [
 //Inserir items no HTML
 const main = document.querySelector(".container-principal")
 
-produtosTecnologia.forEach(item =>{
-main.innerHTML += `<div class="titulo-secao-box">
-<h2 class="titulo-secao" data-text="${item.categoria}">${item.categoria}</h2>
-</div>
-<div class="produtos">
-<div class="card escondido">
-    <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
-    <img src="${item.itens[0].imagem}" class="imagem" alt="teste">
-    <h3>${item.itens[0].nome}</h3>
-    <div class="card-text">
-        <p>${item.itens[0].descricao}</p>
+function mostrarItems(array){
+  main.innerHTML = ""
+
+    array.forEach(item =>{
+    main.innerHTML += `<div class="titulo-secao-box">
+    <h2 class="titulo-secao" data-text="${item.categoria}">${item.categoria}</h2>
     </div>
-    <div class="card-stars">
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star"></i>
+    <div class="produtos">
+    <div class="card escondido">
+        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
+        <img src="${item.itens[0].imagem}" class="imagem" alt="teste">
+        <h3>${item.itens[0].nome}</h3>
+        <div class="card-text">
+            <p>${item.itens[0].descricao}</p>
+        </div>
+        <div class="card-stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+        </div>
+        <div class="card-preco">
+            <h4>R$${item.itens[0].preco}</h4>
+        </div>
+        <div class="card-botao-compra">
+            <button>Compre!</button>
+        </div>
     </div>
-    <div class="card-preco">
-        <h4>R$${item.itens[0].preco}</h4>
+    <div class="card escondido">
+        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
+        <img src="${item.itens[1].imagem}" class="imagem" alt="teste">
+        <h3>${item.itens[1].nome}</h3>
+        <div class="card-text">
+            <p>${item.itens[1].descricao}</p>
+        </div>
+        <div class="card-stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+        </div>
+        <div class="card-preco">
+            <h4>R$${item.itens[1].preco}</h4>
+        </div>
+        <div class="card-botao-compra">
+            <button>Compre!</button>
+        </div>
     </div>
-    <div class="card-botao-compra">
-        <button>Compre!</button>
+    <div class="card escondido">
+        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
+        <img src="${item.itens[2].imagem}" class="imagem" alt="teste">
+        <h3>${item.itens[2].nome}</h3>
+        <div class="card-text">
+            <p>${item.itens[2].descricao}</p>
+        </div>
+        <div class="card-stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+        </div>
+        <div class="card-preco">
+            <h4>R$${item.itens[2].preco}</h4>
+        </div>
+        <div class="card-botao-compra">
+            <button>Compre!</button>
+        </div>
     </div>
-</div>
-<div class="card escondido">
-    <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
-    <img src="${item.itens[1].imagem}" class="imagem" alt="teste">
-    <h3>${item.itens[1].nome}</h3>
-    <div class="card-text">
-        <p>${item.itens[1].descricao}</p>
+    <div class="card escondido">
+        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
+        <img src="${item.itens[3].imagem}" class="imagem" alt="teste">
+        <h3>${item.itens[3].nome}</h3>
+        <div class="card-text">
+            <p>${item.itens[3].descricao}</p>
+        </div>
+        <div class="card-stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+        </div>
+        <div class="card-preco">
+            <h4>R$${item.itens[3].preco}</h4>
+        </div>
+        <div class="card-botao-compra">
+            <button>Compre!</button>
+        </div>
     </div>
-    <div class="card-stars">
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star"></i>
-    </div>
-    <div class="card-preco">
-        <h4>R$${item.itens[1].preco}</h4>
-    </div>
-    <div class="card-botao-compra">
-        <button>Compre!</button>
-    </div>
-</div>
-<div class="card escondido">
-    <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
-    <img src="${item.itens[2].imagem}" class="imagem" alt="teste">
-    <h3>${item.itens[2].nome}</h3>
-    <div class="card-text">
-        <p>${item.itens[2].descricao}</p>
-    </div>
-    <div class="card-stars">
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star"></i>
-    </div>
-    <div class="card-preco">
-        <h4>R$${item.itens[2].preco}</h4>
-    </div>
-    <div class="card-botao-compra">
-        <button>Compre!</button>
-    </div>
-</div>
-<div class="card escondido">
-    <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
-    <img src="${item.itens[3].imagem}" class="imagem" alt="teste">
-    <h3>${item.itens[3].nome}</h3>
-    <div class="card-text">
-        <p>${item.itens[3].descricao}</p>
-    </div>
-    <div class="card-stars">
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star"></i>
-    </div>
-    <div class="card-preco">
-        <h4>R$${item.itens[3].preco}</h4>
-    </div>
-    <div class="card-botao-compra">
-        <button>Compre!</button>
-    </div>
-</div>
-</div>`})
+    </div>`})
+ }
+
+mostrarItems(produtosTecnologia)
 
 //animação scroll
 const myObserver = new IntersectionObserver(entradas =>{
@@ -286,3 +292,5 @@ function ativarNavegacao(){
 lista.forEach(item =>{
   item.addEventListener("click", ativarNavegacao)
 })
+
+//Barra pesquisa
