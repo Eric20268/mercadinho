@@ -171,7 +171,7 @@ main.innerHTML += `<div class="titulo-secao-box">
         <i class="bi bi-star"></i>
     </div>
     <div class="card-preco">
-        <h4>${item.itens[0].preco}</h4>
+        <h4>R$${item.itens[0].preco}</h4>
     </div>
     <div class="card-botao-compra">
         <button>Compre!</button>
@@ -192,7 +192,7 @@ main.innerHTML += `<div class="titulo-secao-box">
         <i class="bi bi-star"></i>
     </div>
     <div class="card-preco">
-        <h4>${item.itens[1].preco}</h4>
+        <h4>R$${item.itens[1].preco}</h4>
     </div>
     <div class="card-botao-compra">
         <button>Compre!</button>
@@ -213,7 +213,7 @@ main.innerHTML += `<div class="titulo-secao-box">
         <i class="bi bi-star"></i>
     </div>
     <div class="card-preco">
-        <h4>${item.itens[2].preco}</h4>
+        <h4>R$${item.itens[2].preco}</h4>
     </div>
     <div class="card-botao-compra">
         <button>Compre!</button>
@@ -234,7 +234,7 @@ main.innerHTML += `<div class="titulo-secao-box">
         <i class="bi bi-star"></i>
     </div>
     <div class="card-preco">
-        <h4>${item.itens[3].preco}</h4>
+        <h4>R$${item.itens[3].preco}</h4>
     </div>
     <div class="card-botao-compra">
         <button>Compre!</button>
