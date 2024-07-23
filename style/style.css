@@ -428,8 +428,7 @@ section{
     border-left: 8px solid var(--cor-destaque);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-bottom-right-radius: 10px;
     transition: all 0.7s ease-in-out;
     position: absolute;
 }
@@ -685,7 +684,7 @@ section{
         right:-15%;
     }
     .alert-carrinho{
-        width: 70%;
+        width: 80%;
         height: 80%;
     }
     .alert-carrinho .text h6{
