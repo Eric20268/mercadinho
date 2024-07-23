@@ -153,7 +153,9 @@ function mostrarItems(array){
   main.innerHTML = ""
 
     array.forEach(item =>{
-    main.innerHTML += `<div class="titulo-secao-box">
+    main.innerHTML += `
+    <section>
+    <div class="titulo-secao-box">
     <h2 class="titulo-secao" data-text="${item.categoria}">${item.categoria}</h2>
     </div>
     <div class="produtos">
@@ -241,7 +243,8 @@ function mostrarItems(array){
             <button>Compre!</button>
         </div>
     </div>
-    </div>`})
+    </div>
+    </section>`})
  }
 
 mostrarItems(produtosTecnologia)

@@ -52,8 +52,8 @@ body{
 /*Barra pesquisa mobile*/
 .barra-pesquisa-mobile{
     width: 0px;
-    height: 60px;
-    background-color: var(--cor-principal);
+    height: 61px;
+    background-color: var(--cor-destaque);
     padding:0 5px;
     border-radius: 10px;
     display: none;
@@ -69,6 +69,7 @@ body{
 
 #pesquisa-mobile{
     width: 100%;
+    height: 100px;
     background:0;
     border:0;
     outline: 0;
@@ -86,10 +87,10 @@ body{
     display: none;
     position: absolute;
     right: 50%;
-    font-size: 36px;
-    padding:9px;
-    background-color: var(--cor-principal);
-    border-radius: 50%;
+    font-size: 37px;
+    padding:3px 10px;
+    background-color: var(--cor-destaque);
+    border-radius: 20px;
     color:var(--cor-fonte);
     cursor: pointer;
     transform: translateX(50%);
@@ -289,6 +290,11 @@ body{
     padding:20px 0px;
 }
 
+section{
+    display: flex;
+    flex-direction: column;
+}
+
 /*Título seção*/
 .titulo-secao-box{
     height: 100px;
@@ -326,7 +332,7 @@ body{
 
 /*produtos começa aqui*/
 
-.container-principal> .produtos{
+.container-principal .produtos{
     width: 100%;
     height:100%;
     display: flex;
@@ -635,11 +641,34 @@ body{
     }
 
     /*Produtos*/
-    .container-principal> .produtos{
+    .container-principal .produtos{
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gap:100px;
+        gap:70px
+    }
+
+    
+    .card-top > i{
+        font-size: 40px;
+    }
+    
+    .card-text{
+        font-size: 16px;
+    }
+    .titulo-secao-box{
+        height: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Notificações*/
+    .notificacoes{
+        top:5%;
+    }
+    .alert-carrinho .icon{
+        font-size: 40px;
     }
 
 }
