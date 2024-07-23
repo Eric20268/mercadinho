@@ -461,7 +461,6 @@ section{
     height: 5px;
     background:var(--cor-destaque);
     border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 .notificacoes.ativar-notificacao{
@@ -681,7 +680,7 @@ section{
     /*Notificações*/
     .notificacoes{
         top:5%;
-        right:-15%;
+        right:-18%;
     }
     .alert-carrinho{
         width: 80%;
