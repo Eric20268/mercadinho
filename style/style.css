@@ -17,12 +17,10 @@
     --cor-fonte: #f0f0f0;
 }
 
-html{
-    overflow-x: hidden;
-}
 
-body{
+body,html{
     min-height: 100vh;
+    min-width: 100vw;
     background:var(--cor-fundo);
     overflow-x: hidden;
     position:relative;
