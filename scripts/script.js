@@ -146,8 +146,6 @@ const produtosTecnologia = [
   }
 ];
 
-
-
 //Inserir items no HTML
 const main = document.querySelector(".container-principal")
 
@@ -160,7 +158,7 @@ function mostrarItems(array){
     </div>
     <div class="produtos">
     <div class="card escondido">
-        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart icon-carro"></i></div>
+        <div class="card-top"><i class="bi bi-heart icon-favs"></i><i class="bi bi-cart icon-carro"></i></div>
         <img src="${item.itens[0].imagem}" class="imagem" alt="teste">
         <h3>${item.itens[0].nome}</h3>
         <div class="card-text">
@@ -181,7 +179,7 @@ function mostrarItems(array){
         </div>
     </div>
     <div class="card escondido">
-        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart icon-carro"></i></div>
+        <div class="card-top"><i class="bi bi-heart icon-favs"></i><i class="bi bi-cart icon-carro"></i></div>
         <img src="${item.itens[1].imagem}" class="imagem" alt="teste">
         <h3>${item.itens[1].nome}</h3>
         <div class="card-text">
@@ -202,7 +200,7 @@ function mostrarItems(array){
         </div>
     </div>
     <div class="card escondido">
-        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart icon-carro"></i></div>
+        <div class="card-top"><i class="bi bi-heart icon-favs"></i><i class="bi bi-cart icon-carro"></i></div>
         <img src="${item.itens[2].imagem}" class="imagem" alt="teste">
         <h3>${item.itens[2].nome}</h3>
         <div class="card-text">
@@ -223,7 +221,7 @@ function mostrarItems(array){
         </div>
     </div>
     <div class="card escondido">
-        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart icon-carro"></i></div>
+        <div class="card-top"><i class="bi bi-heart icon-favs"></i><i class="bi bi-cart icon-carro"></i></div>
         <img src="${item.itens[3].imagem}" class="imagem" alt="teste">
         <h3>${item.itens[3].nome}</h3>
         <div class="card-text">
@@ -286,9 +284,22 @@ lista.forEach(item =>{
 
 //Icons
 const iconCarrinho = document.querySelectorAll(".icon-carro");
+const iconFavoritos = document.querySelectorAll(".icon-favs");
+
+iconFavoritos.forEach(icon => {
+  icon.addEventListener("click", () => {
+    icon.classList.toggle("cor-icon-fav")
+    if (icon.classList.contains("bi-heart")) {
+      icon.classList.replace("bi-heart", "bi-heart-fill");
+    } else {
+      icon.classList.replace("bi-heart-fill", "bi-heart");
+    }
+  });
+});
 
 iconCarrinho.forEach(icon => {
   icon.addEventListener("click", () => {
+    icon.classList.toggle("cor-icon-car")
     if (icon.classList.contains("bi-cart")) {
       icon.classList.replace("bi-cart", "bi-cart-check-fill");
     } else {

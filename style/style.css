@@ -353,7 +353,13 @@ body{
 .card-top > i{
     font-size: 22px;
     cursor: pointer;
+}
+
+.cor-icon-car{
     color: var(--cor-destaque);
+}
+.cor-icon-fav{
+    color: #ff2828;;
 }
 
 .card .imagem{
