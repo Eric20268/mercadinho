@@ -160,7 +160,7 @@ function mostrarItems(array){
     </div>
     <div class="produtos">
     <div class="card escondido">
-        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
+        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart icon-carro"></i></div>
         <img src="${item.itens[0].imagem}" class="imagem" alt="teste">
         <h3>${item.itens[0].nome}</h3>
         <div class="card-text">
@@ -181,7 +181,7 @@ function mostrarItems(array){
         </div>
     </div>
     <div class="card escondido">
-        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
+        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart icon-carro"></i></div>
         <img src="${item.itens[1].imagem}" class="imagem" alt="teste">
         <h3>${item.itens[1].nome}</h3>
         <div class="card-text">
@@ -202,7 +202,7 @@ function mostrarItems(array){
         </div>
     </div>
     <div class="card escondido">
-        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
+        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart icon-carro"></i></div>
         <img src="${item.itens[2].imagem}" class="imagem" alt="teste">
         <h3>${item.itens[2].nome}</h3>
         <div class="card-text">
@@ -223,7 +223,7 @@ function mostrarItems(array){
         </div>
     </div>
     <div class="card escondido">
-        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart"></i></div>
+        <div class="card-top"><i class="bi bi-heart"></i><i class="bi bi-cart icon-carro"></i></div>
         <img src="${item.itens[3].imagem}" class="imagem" alt="teste">
         <h3>${item.itens[3].nome}</h3>
         <div class="card-text">
@@ -294,3 +294,17 @@ lista.forEach(item =>{
 })
 
 //Barra pesquisa
+
+
+//Icons
+const iconCarrinho = document.querySelectorAll(".icon-carro");
+
+iconCarrinho.forEach(icon => {
+  icon.addEventListener("click", () => {
+    if (icon.classList.contains("bi-cart")) {
+      icon.classList.replace("bi-cart", "bi-cart-check-fill");
+    } else {
+      icon.classList.replace("bi-cart-check-fill", "bi-cart");
+    }
+  });
+});

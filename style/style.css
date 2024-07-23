@@ -342,7 +342,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    cursor: pointer;
 }
 
 .card-top{
@@ -352,6 +351,8 @@ body{
 
 .card-top > i{
     font-size: 22px;
+    cursor: pointer;
+    color: var(--cor-destaque);
 }
 
 .card .imagem{
