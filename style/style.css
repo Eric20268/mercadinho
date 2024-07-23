@@ -14,6 +14,7 @@
     --cor-secundaria:#662BC2;
     --cor-complementar:#3B78FC;
     --cor-fundo:#02011E;
+    --cor-fonte: #f0f0f0;
 }
 
 body{
@@ -52,7 +53,7 @@ body{
 .barra-pesquisa-mobile{
     width: 0px;
     height: 60px;
-    background-color: #411F8C;
+    background-color: var(--cor-principal);
     padding:0 5px;
     border-radius: 10px;
     display: none;
@@ -72,12 +73,12 @@ body{
     border:0;
     outline: 0;
     padding: 5px 10px;
-    color:#f0ffff;
+    color:var(--cor-fonte);
     font-size: 16px;
 }
 
 #pesquisa-mobile::placeholder{
-    color:#f0ffff;
+    color:var(--cor-fonte);
     font-size: 16px;
 }
 
@@ -89,7 +90,7 @@ body{
     padding:9px;
     background-color: var(--cor-principal);
     border-radius: 50%;
-    color:#f0ffff;
+    color:var(--cor-fonte);
     cursor: pointer;
     transform: translateX(50%);
     transition: 0.5s;
@@ -110,8 +111,8 @@ body{
     padding:0 25px;
     line-height: 50px;
     border-radius: 10px;
-    border: 2px solid #f0ffff;
-    color:#f0ffff;
+    border: 2px solid var(--cor-fonte);
+    color:var(--cor-fonte);
     background: transparent;
     transition: 0.3s ease;
     z-index: 2;
@@ -123,7 +124,7 @@ body{
     left:5%;
     transform: translateY(-50%);
     font-size: 15px;
-    color:#f0ffff;
+    color:var(--cor-fonte);
     background:var(--cor-fundo);
     padding: 0 15px;
     width: 39%;
@@ -175,7 +176,7 @@ body{
 .btn-hamburguer .linha{
     width: 70%;
     height: 4px;
-    background:#f0ffff;
+    background:var(--cor-fonte);
     margin:6px auto;
     border-radius: 10px;
     transition: 0.4s;
@@ -263,7 +264,7 @@ body{
 }
 
 .menu .lista-menu.ativar-menu li i{
-    color:#f0ffff;
+    color:var(--cor-fonte);
     font-size: 20px;
     margin-right: 5px;
     transition: color 0.2s ease-in-out;
@@ -271,7 +272,7 @@ body{
 
 .menu .lista-menu.ativar-menu li a {
     text-decoration: none;
-    color: #f0ffff;
+    color: var(--cor-fonte);
     text-transform: uppercase;
     transition: color 0.2s ease-in-out;
 }
@@ -373,7 +374,7 @@ body{
     height: 30px;
     border-radius: 30px;
     border:0;
-    color:#f0ffff;
+    color:var(--cor-fonte);
     font-size: 20px;
     font-weight: 600;
     background:linear-gradient(45deg, var(--cor-complementar), var(--cor-principal), var(--cor-secundaria));
