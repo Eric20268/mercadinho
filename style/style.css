@@ -408,7 +408,7 @@ section{
 .notificacoes{
     position: fixed;
     top:20%;
-    right:0px;
+    right:20px;
     width: 400px;
     height: 80px;
     border-radius: 10px;
