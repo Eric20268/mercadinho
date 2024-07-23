@@ -353,6 +353,7 @@ body{
 .card-top > i{
     font-size: 22px;
     cursor: pointer;
+    transition: all 0.4s;
 }
 
 .cor-icon-car{
