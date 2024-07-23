@@ -248,18 +248,7 @@ function mostrarItems(array){
 
 mostrarItems(produtosTecnologia)
 
-//animação scroll
-const myObserver = new IntersectionObserver(entradas =>{
-  entradas.forEach(entrada =>{
-    if(entrada.isIntersecting){
-      entrada.target.classList.add("exposto")
-    }
-  })
-})
 
-const elementos = document.querySelectorAll(".escondido")
-
-elementos.forEach(elemento => myObserver.observe(elemento))
 
 //Pesquisa mobile
 const btnPesquisaMobile = document.querySelector(".pesquisa-btn")
@@ -288,7 +277,6 @@ function ativarNavegacao(){
   this.classList.add("barra-ativada")
 }
 
-
 lista.forEach(item =>{
   item.addEventListener("click", ativarNavegacao)
 })
@@ -308,3 +296,16 @@ iconCarrinho.forEach(icon => {
     }
   });
 });
+
+//animação scroll
+const myObserver = new IntersectionObserver(entradas =>{
+  entradas.forEach(entrada =>{
+    if(entrada.isIntersecting){
+      entrada.target.classList.add("exposto")
+    }
+  })
+})
+
+const elementos = document.querySelectorAll(".escondido")
+
+elementos.forEach(elemento => myObserver.observe(elemento))
