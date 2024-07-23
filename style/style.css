@@ -495,7 +495,7 @@ section{
 .barra-items{
     position: fixed;
     bottom: 0px;
-    width: 100%;
+    width: 100vw;
 }
 
 .navegacao-fundo{
@@ -510,7 +510,7 @@ section{
 .navegacao{
     position:relative;
     width:400px;
-    height: 70px;
+    height: 60px;
     background:#fff;
     justify-content: center;
     align-items: center;
@@ -588,7 +588,7 @@ section{
 .navegacao .indicador::before{
     content: " ";
     position: absolute;
-    top:50%;
+    top:43%;
     left: -22px;
     height: 20px;
     width: 20px;
@@ -600,7 +600,7 @@ section{
 .navegacao .indicador::after{
     content: " ";
     position: absolute;
-    top:50%;
+    top:43%;
     right: -22px;
     height: 20px;
     width: 20px;
@@ -660,7 +660,7 @@ section{
     section{
         overflow-x:hidden;
     }
-    
+
     .titulo-secao-box{
         height: 220px;
         display: flex;
