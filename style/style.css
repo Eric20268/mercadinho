@@ -408,7 +408,7 @@ section{
 .notificacoes{
     position: fixed;
     top:20%;
-    right:20px;
+    right:0px;
     width: 400px;
     height: 80px;
     border-radius: 10px;
@@ -678,6 +678,7 @@ section{
     /*Notificações*/
     .notificacoes{
         top:5%;
+        right:1%;
     }
     .alert-carrinho .icon{
         font-size: 35px;
