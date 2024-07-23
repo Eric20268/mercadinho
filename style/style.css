@@ -656,6 +656,11 @@ section{
     .card-text{
         font-size: 16px;
     }
+
+    section{
+        overflow-x:hidden;
+    }
+    
     .titulo-secao-box{
         height: 220px;
         display: flex;
@@ -664,8 +669,9 @@ section{
     }
 
     .titulo-secao-box .titulo-secao{
-        font-size: 43px;
+        font-size: 37px;
     }
+
 
     /*Notificações*/
     .notificacoes{
