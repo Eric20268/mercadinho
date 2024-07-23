@@ -414,7 +414,6 @@ section{
     border-radius: 10px;
     overflow: hidden;
     z-index: 1000;
-    box-shadow: 0 5px 10px #0000007a;
     transform: translateX(200%);
     transition: all 0.7s ease-in-out;
 }
@@ -425,9 +424,12 @@ section{
     align-items: center;
     justify-content: space-evenly;
     background:var(--cor-fonte);
+    box-shadow: 0 5px 10px #0000007a;
     border-left: 8px solid var(--cor-destaque);
     border-top-left-radius: 10px;
-    border-top-right-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
     transition: all 0.7s ease-in-out;
     position: absolute;
 }
@@ -678,7 +680,17 @@ section{
     /*Notificações*/
     .notificacoes{
         top:5%;
-        right:1%;
+        right:-8%;
+    }
+    .alert-carrinho{
+        width: 85%;
+        height: 80%;
+    }
+    .alert-carrinho .text h6{
+        font-size: 18px;
+    }
+    .alert-carrinho .text p{
+        font-size: 13px;
     }
     .alert-carrinho .icon{
         font-size: 35px;
