@@ -282,7 +282,7 @@ lista.forEach(item =>{
 //Barra pesquisa
 
 
-//Icons
+//Icons e notificação
 const iconCarrinho = document.querySelectorAll(".icon-carro");
 const iconFavoritos = document.querySelectorAll(".icon-favs");
 
@@ -297,13 +297,32 @@ iconFavoritos.forEach(icon => {
   });
 });
 
+const notificacao = document.querySelector(".notificacoes")
+
 iconCarrinho.forEach(icon => {
   icon.addEventListener("click", () => {
+    const notiCarrinho = document.querySelector(".alert-carrinho.retirado")
+
+
+    if (notificacao.classList.contains("ativar-notificacao")) {
+      return;
+    }
+
+    
+    setTimeout(()=>{
+      notificacao.classList.remove("ativar-notificacao")
+    },7000)
+    
     icon.classList.toggle("cor-icon-car")
+
     if (icon.classList.contains("bi-cart")) {
       icon.classList.replace("bi-cart", "bi-cart-check-fill");
+      notificacao.classList.add("ativar-notificacao")
+      notiCarrinho.style.display = "none"
     } else {
       icon.classList.replace("bi-cart-check-fill", "bi-cart");
+      notificacao.classList.add("ativar-notificacao")
+      notiCarrinho.style.display = "flex"
     }
   });
 });
