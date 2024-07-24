@@ -26,6 +26,23 @@ body,html{
     position:relative;
 }
 
+/*Barra de rolagem*/
+body::-webkit-scrollbar{
+    width: 15px;
+    background:var(--cor-principal);
+}
+
+body::-webkit-scrollbar-thumb{
+    width: 15px;
+    background:var(--cor-destaque);
+    border-radius: 5px;
+    border: 2px solid var(--cor-principal);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--cor-secundaria);
+}
+
 .logo{
     display: block;
     border-radius: 10px;
@@ -295,6 +312,7 @@ body,html{
 section{
     display: flex;
     flex-direction: column;
+    padding-bottom: 100px;
 }
 
 /*Título seção*/
