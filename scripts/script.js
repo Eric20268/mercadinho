@@ -376,3 +376,16 @@ const myObserver = new IntersectionObserver(entradas => {
 const elementos = document.querySelectorAll('.escondido')
 
 elementos.forEach(elemento => myObserver.observe(elemento))
+
+//Carrinho
+
+const botaoAtivarCarrinho = document.querySelector(".btn-ativar-carrinho")
+const botaoFecharCarrinho = document.querySelector("#fechar-carrinho")
+const carrinho = document.querySelector(".carrinho")
+
+botaoAtivarCarrinho.addEventListener("click",()=>{
+  carrinho.classList.toggle("ativar-carrinho")
+})
+botaoFecharCarrinho.addEventListener("click",()=>{
+  carrinho.classList.remove("ativar-carrinho")
+})
