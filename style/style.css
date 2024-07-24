@@ -780,6 +780,7 @@ section:last-of-type{
     box-shadow: 3px 2px 11px 1px #05fdea;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .carrinho-top{
@@ -837,4 +838,12 @@ section:last-of-type{
     font-size: 20px;
     background:var(--cor-destaque);
     color:var(--cor-fonte);
+}
+
+/*Responsividade*/
+@media (width<= 800px){
+
+    .carrinho-top > #fechar-carrinho{
+        left:1%
+    }
 }
