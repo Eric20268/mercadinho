@@ -8,22 +8,27 @@
     text-decoration: none;
 }
 
-:root{
-    --cor-principal:#411F8C;
-    --cor-destaque:#752ade;
-    --cor-secundaria:#662BC2;
-    --cor-complementar:#3B78FC;
-    --cor-fundo:#02011E;
-    --cor-fonte: #f0f0f0;
+:root {
+     --cor-principal: #103061;     /* Azul Marinho Profundo */
+    --cor-destaque: #4ee8c4;      /* Verde Água Brilhante */
+    --cor-secundaria: #0f5cc8;    /* Azul Escuro */
+    --cor-complementar: #3396ff;  /* Rosa Vibrante */
+    --cor-fundo: #001F3F;         /* Azul Escuro Profundo */
+    --cor-fonte: #fbfbfb;         /* Cinza Claro */
+    
 }
 
 
-body,html{
-    min-height: 100vh;
-    min-width: 100vw;
+html{
+    overflow: hidden;
+}
+
+body{
     background:var(--cor-fundo);
     overflow-x: hidden;
     position:relative;
+    display: flex;
+    flex-direction: column;
 }
 
 /*Barra de rolagem*/
@@ -34,19 +39,19 @@ body::-webkit-scrollbar{
 
 body::-webkit-scrollbar-thumb{
     width: 15px;
-    background:var(--cor-destaque);
+    background: var(--cor-secundaria);
     border-radius: 5px;
     border: 2px solid var(--cor-principal);
 }
 
 body::-webkit-scrollbar-thumb:hover {
-    background: var(--cor-secundaria);
+    background:var(--cor-destaque);
 }
 
 .logo{
     display: block;
     border-radius: 10px;
-    width: 90px;
+    width: 100px;
 }
 
 /* CABECALHO TODO COMEÇA AQUI */
@@ -315,6 +320,10 @@ section{
     padding-bottom: 100px;
 }
 
+section:last-of-type{
+    padding-bottom: 250px;
+}
+
 /*Título seção*/
 .titulo-secao-box{
     height: 100px;
@@ -410,7 +419,7 @@ section{
     color:var(--cor-fonte);
     font-size: 20px;
     font-weight: 600;
-    background:linear-gradient(45deg, var(--cor-complementar), var(--cor-principal), var(--cor-secundaria));
+    background:linear-gradient(45deg, var(--cor-destaque), var(--cor-secundaria), var(--cor-principal));
     backdrop-filter: blur(2px);
     cursor: pointer;
     transition: all 0.4s;
@@ -468,7 +477,7 @@ section{
 
 .alert-carrinho .icon{
     font-size: 30px;
-    color:var(--cor-secundaria);
+    color:var(--cor-destaque);
 }
 
 .notificacoes .progresso{
@@ -500,7 +509,7 @@ section{
 }
 
 .notificacoes.ativar-notificacao .progresso{
-    animation: animarBarra 5s forwards;
+    animation: animarBarra 3.5s ease-in-out forwards;
     animation-delay: 1s;
 }
 

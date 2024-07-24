@@ -336,6 +336,7 @@ iconFavoritos.forEach(icon => {
 })
 
 const notificacao = document.querySelector('.notificacoes')
+const segundosNotificacoes = 4000
 
 iconCarrinho.forEach(icon => {
   icon.addEventListener('click', () => {
@@ -347,7 +348,7 @@ iconCarrinho.forEach(icon => {
 
     setTimeout(() => {
       notificacao.classList.remove('ativar-notificacao')
-    }, 7000)
+    }, segundosNotificacoes)
 
     icon.classList.toggle('cor-icon-car')
 
