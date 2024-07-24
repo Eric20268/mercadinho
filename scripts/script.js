@@ -336,7 +336,7 @@ iconFavoritos.forEach(icon => {
 })
 
 const notificacao = document.querySelector('.notificacoes')
-const segundosNotificacoes = 4000
+const segundosNotificacoes = 3500
 
 iconCarrinho.forEach(icon => {
   icon.addEventListener('click', () => {

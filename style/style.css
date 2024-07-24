@@ -9,12 +9,12 @@
 }
 
 :root {
-     --cor-principal: #103061;     /* Azul Marinho Profundo */
-    --cor-destaque: #4ee8c4;      /* Verde Água Brilhante */
-    --cor-secundaria: #0f5cc8;    /* Azul Escuro */
-    --cor-complementar: #3396ff;  /* Rosa Vibrante */
-    --cor-fundo: #001F3F;         /* Azul Escuro Profundo */
-    --cor-fonte: #fbfbfb;         /* Cinza Claro */
+    --cor-principal: #103061;
+    --cor-destaque: #4ee8c4;
+    --cor-secundaria: #0f5cc8;
+    --cor-complementar: #3396ff;
+    --cor-fundo: #001F3F;
+    --cor-fonte: #fbfbfb;
     
 }
 
@@ -210,7 +210,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .btn-hamburguer.ativar-menu .linha:nth-of-type(1){
     transform: translateY(2px) rotate(45deg);
-    background: var(--cor-principal);
+    background: var(--cor-destaque);
 }
 
 .btn-hamburguer.ativar-menu .linha:nth-of-type(2){
@@ -219,7 +219,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .btn-hamburguer.ativar-menu .linha:nth-of-type(3){
     transform: translateY(-18px) rotate(-45deg);
-    background: var(--cor-principal);
+    background: var(--cor-destaque);
 }
 /* botão menu temina aqui */
 
@@ -393,6 +393,7 @@ section:last-of-type{
 
 .cor-icon-car{
     color: var(--cor-destaque);
+    filter: drop-shadow(0px 0px 1px rgba(68, 238, 238, 0.302));
 }
 .cor-icon-fav{
     color: #ff2828;;
@@ -492,7 +493,7 @@ section:last-of-type{
 
 .notificacoes.ativar-notificacao{
     transform: translateX(0%);
-    animation: animarSurgimento 2s ease-in-out alternate;
+    animation: animarSurgimento 1s ease-in-out alternate;
 }
 
 
@@ -509,7 +510,7 @@ section:last-of-type{
 }
 
 .notificacoes.ativar-notificacao .progresso{
-    animation: animarBarra 3.5s ease-in-out forwards;
+    animation: animarBarra 2.5s ease-in-out forwards;
     animation-delay: 1s;
 }
 
@@ -547,7 +548,7 @@ section:last-of-type{
     align-items: center;
     border-radius: 10px;
     margin: 0 auto;
-    box-shadow:1px 2px 6px 0px #752ade;
+    box-shadow:1px 2px 6px 0px var(--cor-destaque);
 }
 
 .navegacao ul{
