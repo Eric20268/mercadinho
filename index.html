@@ -1,126 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SmartHub</title>
-        <link rel="stylesheet" href="style/style.css">
-        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <script defer="defer" src="scripts/script.js"></script>
-    </head>
-    <body>
-        <header>
-            <div class="cabecalho">
-                <div class="logo">
-                    <img src="img/logo.png" alt="Logo do mercado DM"
-                        class="logo">
-                </div>
 
-                <div class="barra-pesquisa">
-                    <input type="text" id="pesquisa-input" maxlength="30" autocomplete="off"
-                        required>
-                    <label class="texto-flutuante" for="pesquisa-input">Buscar aqui<i class="bi bi-search"></i> </label>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHub</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script defer="defer" src="scripts/script.js"></script>
+</head>
 
-                <div class="barra-pesquisa-mobile">
-                    <input type="text" id="pesquisa-mobile" maxlength="30" autocomplete="off" placeholder="Buscar aqui">
-                    <i class="pesquisa-btn bi bi-search"></i>
-                </div>
-
-                <button class="btn-hamburguer">
-                    <div class="linha"></div>
-                    <div class="linha"></div>
-                    <div class="linha"></div>
-
-                    <div class="menu">
-                        <nav>
-                            <ul class="lista-menu">
-                                <li><a href="#"><i class="bi bi-person-circle"></i>Perfil</a></li>
-                                <li></i></i><a href="#"><i class="bi bi-gear-fill"></i> Configurações</a></li>
-                                <li><a href="#"><i class="bi bi-telephone-fill"></i>Contato</a></li>
-                                <li><a href="#"><i class="bi bi-info-circle"></i>Sobre</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </button>
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo do mercado DM" class="logo">
             </div>
-        </header>
-        <main>
-            <div class="notificacoes">
-                <div class="alert-carrinho">
-                    <i class="bi bi-check-circle-fill icon"></i>
-                    <div class="text">
-                        <h6>Sucesso!</h6>
-                        <p>Produto adicionado no carrinho!</p>
-                    </div>
-                    <div class="progresso"></div>
-                </div>
-                <div class="alert-carrinho retirado">
-                    <i class="bi bi-x-circle-fill icon"></i>
-                    <div class="text">
-                        <h6>Produto retirado!</h6>
-                        <p>Produto retirado do carrinho!</p>
-                    </div>
-                    <div class="progresso"></div>
-                </div>
+
+            <div class="barra-pesquisa">
+                <input type="text" id="pesquisa-input" maxlength="30" autocomplete="off" required>
+                <label class="texto-flutuante" for="pesquisa-input">Buscar aqui<i class="bi bi-search"></i> </label>
             </div>
-            
-            <div class="container-principal">
-                <div class="produtos"></div>
+
+            <div class="barra-pesquisa-mobile">
+                <input type="text" id="pesquisa-mobile" maxlength="30" autocomplete="off" placeholder="Buscar aqui">
+                <i class="pesquisa-btn bi bi-search"></i>
             </div>
-           
-            <div class="barra-items">
-                <div class="navegacao-fundo">
-                    <div class="navegacao">
-                        <ul>
-                            <li class="lista barra-ativada">
-                                <a href="#">
-                                    <i class="bi bi-house-door"></i>
-                                    <p>Início</p>
-                                </a>
-                            </li>
-                            <li class="lista">
-                                <a href="#" class="btn-ativar-carrinho">
-                                    <i class="bi bi-cart2"></i>
-                                    <p>Carrinho</p>
-                                </a>
-                            </li>
-                            <li class="lista">
-                                <a href="#">
-                                    <i class="bi bi-basket3"></i>
-                                    <p>Compras</p>
-                                </a>
-                            </li>
-                            <li class="lista">
-                                <a href="#">
-                                    <i class="bi bi-heart"></i>
-                                    <p>Favoritos</p>
-                                </a>
-                            </li>
-                            <div class="indicador"></div>
+
+            <button class="btn-hamburguer">
+                <div class="linha"></div>
+                <div class="linha"></div>
+                <div class="linha"></div>
+
+                <div class="menu">
+                    <nav>
+                        <ul class="lista-menu">
+                            <li><a href="#"><i class="bi bi-person-circle"></i>Perfil</a></li>
+                            <li></i></i><a href="#" id="btn-configuracoes"><i class="bi bi-gear-fill"></i>
+                                    Configurações</a></li>
+                            <li><a href="#"><i class="bi bi-telephone-fill"></i>Contato</a></li>
+                            <li><a href="#"><i class="bi bi-info-circle"></i>Sobre</a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="configuracoes">
+            <h4>Gerais</h4>
+            <div class="gerais">
+                <ul>
+                    <li>
+                        <i class="bi bi-brightness-high"></i>
+                    </li>
+                </ul>
             </div>
-            <div class="carrinho">
-                <div class="container-carrinho">
-                    <div class="carrinho-top">
-                        <button id="fechar-carrinho"><i class="bi bi-caret-left-fill"></i></button>
-                        <h2>Meu carrinho</h2>
-                    </div>
-                    <div class="card-carrinho">
-                        <div class="produtos">
-                            <!--CONTINUE A FAZER OS PRODUTOS AQUI-->
-                        </div>
-                    </div>
-                    <div class="carrinho-button">
-                        <button id="btn-pagar">Pagar R$54,65</button>
-                    </div>
-                </div>
-            </div>
-        </main>
+        </div>
 
-    </body>
+        <div class="notificacoes">
+            <div class="alert-carrinho">
+                <i class="bi bi-check-circle-fill icon"></i>
+                <div class="text">
+                    <h6>Sucesso!</h6>
+                    <p>Produto adicionado no carrinho!</p>
+                </div>
+                <div class="progresso"></div>
+            </div>
+            <div class="alert-carrinho retirado">
+                <i class="bi bi-x-circle-fill icon"></i>
+                <div class="text">
+                    <h6>Produto retirado!</h6>
+                    <p>Produto retirado do carrinho!</p>
+                </div>
+                <div class="progresso"></div>
+            </div>
+        </div>
+
+        <div class="container-principal">
+            <div class="produtos"></div>
+        </div>
+
+        <div class="barra-items">
+            <div class="navegacao-fundo">
+                <div class="navegacao">
+                    <ul>
+                        <li class="lista barra-ativada">
+                            <a href="#">
+                                <i class="bi bi-house-door"></i>
+                                <p>Início</p>
+                            </a>
+                        </li>
+                        <li class="lista">
+                            <a href="#" class="btn-ativar-carrinho">
+                                <i class="bi bi-cart2"></i>
+                                <p>Carrinho</p>
+                            </a>
+                        </li>
+                        <li class="lista">
+                            <a href="#">
+                                <i class="bi bi-basket3"></i>
+                                <p>Compras</p>
+                            </a>
+                        </li>
+                        <li class="lista">
+                            <a href="#">
+                                <i class="bi bi-heart"></i>
+                                <p>Favoritos</p>
+                            </a>
+                        </li>
+                        <div class="indicador"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="carrinho">
+            <div class="container-carrinho">
+                <div class="carrinho-top">
+                    <button id="fechar-carrinho"><i class="bi bi-caret-left-fill"></i></button>
+                    <h2>Meu carrinho</h2>
+                </div>
+                <div class="card-carrinho">
+                    <div class="produtos">
+                        <!--CONTINUE A FAZER OS PRODUTOS AQUI-->
+                    </div>
+                </div>
+                <div class="carrinho-button">
+                    <button id="btn-pagar">Pagar R$54,65</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
 </html>
