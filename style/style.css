@@ -35,10 +35,18 @@ body{
     flex-direction: column;
 }
 
+body.ativar-dark-mode{
+    background: var(--cor-fundo);
+}
+
 /*Barra de rolagem*/
 body::-webkit-scrollbar{
     width: 15px;
     background:var(--cor-fundo-light)
+}
+
+body.ativar-dark-mode::-webkit-scrollbar{
+    background:var(--cor-fundo);
 }
 
 body::-webkit-scrollbar-thumb{
@@ -68,6 +76,10 @@ body::-webkit-scrollbar-thumb:hover {
     align-items: center;
     background:var(--cor-destaque);
     box-shadow: 5px -5px 11px 10px var(--cor-destaque);
+}
+
+.cabecalho.ativar-dark-mode{
+    background:transparent;
 }
 
 /*Barra Pesquisa começa aqui*/
@@ -147,6 +159,7 @@ body::-webkit-scrollbar-thumb:hover {
     z-index: 2;
 }
 
+
 .texto-flutuante{
     position: absolute;
     top:50%;
@@ -163,14 +176,19 @@ body::-webkit-scrollbar-thumb:hover {
     transition: all 0.4s ease;
 }
 
+.texto-flutuante.ativar-dark-mode{
+    background:var(--cor-fundo)
+}
+
 .texto-flutuante > i{
     font-size: 20px;
     transition: all 0.4s ease;
 }
 
-#pesquisa-input:focus,
-#pesquisa-input:valid{
-    color:var(--cor-fonte);
+#pesquisa-input.ativar-dark-mode:focus,
+#pesquisa-input.ativar-dark-mode:valid{
+    color:var(--cor-fundo);
+    border:2px solid var(--cor-destaque);
 }
 
 #pesquisa-input:focus + .texto-flutuante,
@@ -180,6 +198,10 @@ body::-webkit-scrollbar-thumb:hover {
     line-height: 30px;
     transform: translate(-14px,-40px) scale(0.88);
     z-index: 2;
+}
+#pesquisa-input.ativar-dark-mode:focus + .texto-flutuante,
+#pesquisa-input.ativar-dark-mode:valid + .texto-flutuante{
+    color:var(--cor-destaque);
 }
 
 
@@ -540,18 +562,25 @@ section:last-of-type{
     align-items: center;
     flex-direction: column;
     overflow: hidden;
+    transition: all 0.5s;
 }
 
-.configuracoes > ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.configuracoes.ativar-configuracoes{
+    height: 100vh;
 }
 
-.configuracoes > ul > li > i{
-    font-size: 30px;
+#btn-fechar-configuracoes{
+    position: absolute;
+    top:20px;
+    left:20px;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    color:#ff0000;
+    border:0;
+    background:0;
+    cursor: pointer;
 }
-
 
 .configuracoes > h4{
     font-weight: bolder;
@@ -565,6 +594,36 @@ section:last-of-type{
     border-radius: 20px;
     background:#fff;
 }
+.configuracoes .gerais ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.gerais ul li{
+    position: relative;
+}
+.gerais ul li .btn-dark-mode{
+    width: 250px;
+    background:#e6e6e6;
+    border-radius: 40px;
+    padding:0 10px;
+    position:relative;
+}
+
+.gerais ul li .btn-dark-mode i{
+    display: block;
+    font-size: 50px;
+    transition: all 0.5s;
+}
+
+.gerais ul li .btn-dark-mode.ativar-dark-mode i{
+    transform: translateX(78%);
+}
+
+
 
 /* configurações termina aqui */
 
@@ -578,11 +637,15 @@ section:last-of-type{
 
 .navegacao-fundo{
     position: relative;
-    background:var(--cor-fundo);
+    background:var(--cor-fundo-light);
     height: 91px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.navegacao-fundo.ativar-dark-mode{
+    background:var(--cor-fundo);
 }
 
 .navegacao{
@@ -660,8 +723,12 @@ section:last-of-type{
     height: 70px;
     background:var(--cor-destaque);
     border-radius: 50%;
-    border:6px solid var(--cor-fundo);
+    border:6px solid var(--cor-fundo-light);
     transition: .6s;
+}
+
+.navegacao-fundo.ativar-dark-mode .navegacao .indicador{
+    border-color: var(--cor-fundo);
 }
 
 .navegacao .indicador::before{
@@ -673,7 +740,7 @@ section:last-of-type{
     width: 20px;
     background:transparent;
     border-top-right-radius: 20px;
-    box-shadow: 0px -8px 0 0 var(--cor-fundo);
+    box-shadow: 0px -8px 0 0 var(--cor-fundo-light);
 }
 
 .navegacao .indicador::after{
@@ -685,6 +752,13 @@ section:last-of-type{
     width: 20px;
     background:transparent;
     border-top-left-radius: 20px;
+    box-shadow: 0px -10px 0 0 var(--cor-fundo-light);
+}
+
+.navegacao-fundo.ativar-dark-mode .navegacao .indicador::after{
+    box-shadow: 0px -10px 0 0 var(--cor-fundo);
+}
+.navegacao-fundo.ativar-dark-mode .navegacao .indicador::before{
     box-shadow: 0px -10px 0 0 var(--cor-fundo);
 }
 
@@ -805,7 +879,6 @@ section:last-of-type{
     width: 97%;
     height: 0;
     background:#e2e2e29b;
-    backdrop-filter: blur(10px);
     border-radius: 20px;
     z-index: 200;
     justify-content: center;

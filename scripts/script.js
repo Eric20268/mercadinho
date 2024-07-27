@@ -389,3 +389,36 @@ botaoAtivarCarrinho.addEventListener("click",()=>{
 botaoFecharCarrinho.addEventListener("click",()=>{
   carrinho.classList.remove("ativar-carrinho")
 })
+
+
+//configuracoes
+const botaoConfiguracao = document.querySelector("#btn-configuracoes")
+const botaoFecharConfiguracoes = document.querySelector("#btn-fechar-configuracoes")
+const configuracoes = document.querySelector(".configuracoes")
+
+botaoConfiguracao.addEventListener("click", ()=>{
+  configuracoes.classList.add("ativar-configuracoes")
+})
+
+botaoFecharConfiguracoes.addEventListener("click",()=>{
+  configuracoes.classList.remove("ativar-configuracoes")
+})
+
+const botaoDarkMode = document.querySelector(".btn-dark-mode")
+const icon = document.querySelector(".btn-dark-mode > i")
+
+botaoDarkMode.addEventListener("click", ()=>{
+  botaoDarkMode.classList.toggle("ativar-dark-mode")
+
+  if(icon.classList.contains("bi-brightness-high")){
+    icon.classList.replace("bi-brightness-high", "bi-moon")
+  }else{
+    icon.classList.replace("bi-moon", "bi-brightness-high")
+  }
+
+  document.querySelector("body").classList.toggle("ativar-dark-mode")
+  document.querySelector(".cabecalho").classList.toggle("ativar-dark-mode")
+  document.querySelector(".texto-flutuante").classList.toggle("ativar-dark-mode")
+  document.querySelector("#pesquisa-input").classList.toggle("ativar-dark-mode")
+  document.querySelector(".navegacao-fundo").classList.toggle("ativar-dark-mode")
+})
