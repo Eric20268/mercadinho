@@ -384,7 +384,7 @@ const botaoFecharCarrinho = document.querySelector("#fechar-carrinho")
 const carrinho = document.querySelector(".carrinho")
 
 botaoAtivarCarrinho.addEventListener("click",()=>{
-  carrinho.classList.toggle("ativar-carrinho")
+  carrinho.classList.add("ativar-carrinho")
 })
 botaoFecharCarrinho.addEventListener("click",()=>{
   carrinho.classList.remove("ativar-carrinho")

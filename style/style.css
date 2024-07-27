@@ -873,7 +873,7 @@ section:last-of-type{
 
 .carrinho{
     position: fixed;
-    top:45%;
+    top:50%;
     left:50%;
     transform: translate(-50%,-50%);
     width: 97%;
@@ -889,7 +889,7 @@ section:last-of-type{
 
 .carrinho.ativar-carrinho{
     display: flex;
-    height: calc(100vh - 106px);
+    height: calc(98vh);
 }
 
 .container-carrinho{
