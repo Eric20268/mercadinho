@@ -421,4 +421,5 @@ botaoDarkMode.addEventListener("click", ()=>{
   document.querySelector(".texto-flutuante").classList.toggle("ativar-dark-mode")
   document.querySelector("#pesquisa-input").classList.toggle("ativar-dark-mode")
   document.querySelector(".navegacao-fundo").classList.toggle("ativar-dark-mode")
+  document.querySelector(".logo").classList.toggle("ativar-dark-mode")
 })
